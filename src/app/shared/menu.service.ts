@@ -12,33 +12,215 @@ export class MenuService {
     this.menu = new MenuModel();
     this.menu.items = [
       {
-        name: "Pizza Funghi",
-        options: [
-          {
-            definition: "Groß",
-            price: 7.5
-          },
-          {
-            definition: "Mittel",
-            price: 5
-          }
-        ],
+        name: "Pizza Kebab",
+        price: 5,
         id: 4
       },
       {
         name: "Pizza Kebab",
-        options: [
-          {
-            definition: "Groß",
-            price: 7.5
-          },
-          {
-            definition: "Mittel",
-            price: 5
-          }
-        ],
+        price: 5,
         id: 4
-      }
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
+      {
+        name: "Pizza Kebab",
+        price: 5,
+        id: 4
+      },
     ];
   }
 }

@@ -1,7 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {MenuItemModel} from '../../shared/models/menu-item.model';
-import {MenuItemOptionModel} from '../../shared/models/menu-item-option.model';
 
 @Component({
   selector: 'vp-selection-dialog',
@@ -18,7 +17,7 @@ export class SelectionDialogComponent {
     this.dialogRef.close();
   }
 
-  selectOption(item: MenuItemOptionModel) {
-    this.dialogRef.close(item);
+  selectOption() {
+    this.dialogRef.close();
   }
 }

@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {IndexComponent} from './index/index.component';
 import {MenuComponent} from './menu/menu.component';
+import {OrderComponent} from './order/order.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,12 @@ const routes: Routes = [
     component: IndexComponent
   },
   {
-    path: 'menu',
+    path: 'menu/:id',
     component: MenuComponent
+  },
+  {
+    path: 'order/:id',
+    component: OrderComponent
   }
 ];
 

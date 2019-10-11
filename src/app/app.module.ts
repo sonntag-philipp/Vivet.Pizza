@@ -14,6 +14,8 @@ import {MenuService} from './shared/menu.service';
 import {SelectionDialogComponent} from './menu/selection-dialog/selection-dialog.component';
 import {FormsModule} from '@angular/forms';
 import { MenuToolbarComponent } from './menu/menu-toolbar/menu-toolbar.component';
+import { OrderComponent } from './order/order.component';
+import {OrderService} from './shared/order.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { MenuToolbarComponent } from './menu/menu-toolbar/menu-toolbar.component
     IndexComponent,
     MenuComponent,
     SelectionDialogComponent,
-    MenuToolbarComponent
+    MenuToolbarComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +41,12 @@ import { MenuToolbarComponent } from './menu/menu-toolbar/menu-toolbar.component
     FormsModule
   ],
   providers: [
-    MenuService
+    MenuService,
+    OrderService
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent
+  ],
   entryComponents: [
     SelectionDialogComponent
   ]

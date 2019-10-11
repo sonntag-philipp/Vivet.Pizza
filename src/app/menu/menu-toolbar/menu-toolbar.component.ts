@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {OrderService} from '../../shared/order.service';
 
 @Component({
   selector: 'vp-menu-toolbar',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-toolbar.component.scss']
 })
 export class MenuToolbarComponent implements OnInit {
+  get id(): string {
+    return this.orderService.id;
+  }
 
-  constructor() { }
+  constructor(
+    private orderService: OrderService
+  ) { }
 
   ngOnInit() {
   }

@@ -6,22 +6,19 @@
     </mat-form-field>
     <table class="menu-table" mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> Nummer </th>
-        <td (click)="selectElement(element)" mat-cell *matCellDef="let element"> {{element.id}}</td>
+        <th mat-header-cell *matHeaderCellDef>Number</th>
+        <td (click)="selectElement(menuItem)" mat-cell *matCellDef="let menuItem"> {{menuItem.id}}</td>
       </ng-container>
 
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td (click)="selectElement(element)" mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td (click)="selectElement(menuItem)" mat-cell *matCellDef="let menuItem"> {{menuItem.name}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="options">
-        <th mat-header-cell *matHeaderCellDef> Preise </th>
-        <td (click)="selectElement(element)" mat-cell *matCellDef="let element">
-          <span *ngFor="let item of element.options">
-            {{item.price}}€
-            <span *ngIf="element.options[element.options.length - 1] !== item">/</span>
-          </span>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Price</th>
+        <td (click)="selectElement(menuItem)" mat-cell *matCellDef="let menuItem">
+          {{menuItem.price}}€
         </td>
       </ng-container>
 

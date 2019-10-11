@@ -1,5 +1,10 @@
 <mat-toolbar class="toolbar" color="primary">
-  <span>Vivet Pizza</span>
-  <span fxFlex="auto"></span>
-  <span>Order: 4566</span>
+  <span fxFlex="auto">
+    <button mat-icon-button [routerLink]="['/']"><mat-icon>home</mat-icon></button>
+  </span>
+  <span>#{{id}}</span>
+  <div fxFlex="auto" fxLayoutAlign="end">
+    <button mat-icon-button [routerLink]="['/order', id]"><mat-icon>list</mat-icon></button>
+  </div>
 </mat-toolbar>
+<mat-toolbar color="primary" class="shadow-toolbar" ></mat-toolbar>

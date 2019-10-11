@@ -3,6 +3,8 @@ import {MenuService} from '../shared/menu.service';
 import {MatDialog, MatTableDataSource} from '@angular/material';
 import {MenuItemModel} from '../shared/models/menu-item.model';
 import {SelectionDialogComponent} from './selection-dialog/selection-dialog.component';
+import {OrderService} from '../shared/order.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'vp-menu',
@@ -12,11 +14,23 @@ import {SelectionDialogComponent} from './selection-dialog/selection-dialog.comp
 export class MenuComponent implements OnInit {
 
   public dataSource = new MatTableDataSource(this.menuService.menu.items);
-  public displayedColumns = ["id", "name", "options"];
+  public displayedColumns = ["id", "name", "price"];
 
-  constructor(public menuService: MenuService, private dialog: MatDialog) { }
+  constructor(
+    public menuService: MenuService,
+    private orderService: OrderService,
+    private dialog: MatDialog,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      next => {
+        if (next.id !== undefined) {
+          this.orderService.id = next.id;
+        }
+      }
+    );
   }
 
   applyFilter(value: string) {

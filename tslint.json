@@ -66,6 +66,13 @@
       true,
       "as-needed"
     ],
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore"
+      ]
+    },
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [
