@@ -5,12 +5,12 @@ import {AppMaterialModule} from '../app-material.module';
 import {MatCardModule} from '@angular/material';
 import {PublicRoutingModule} from './public-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
-
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    IndexComponent
+    IndexComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
