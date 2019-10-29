@@ -1,7 +1,10 @@
-<div fxLayoutAlign="center start">
-  <mat-card fxFlex="90" fxFlex.gt-lg="50">
-    <mat-card-title>
-      Hallo
-    </mat-card-title>
-  </mat-card>
+<div class="index-container" fxLayoutAlign="center center">
+  <div fxLayout="column">
+    <img src="assets/img/logo_x250.png" alt="Lama with pizza">
+    <h1 class="index-title">Vivizza</h1>
+    <div>
+      <button mat-stroked-button color="primary" class="option-button" [routerLink]="['/', 'order']">Create order</button>
+      <button mat-stroked-button color="warn" class="option-button">Join order</button>
+    </div>
+  </div>
 </div>

@@ -8,10 +8,6 @@ const routes: Route[] = [
   {
     path: "",
     component: IndexComponent
-  },
-  {
-    path: "**",
-    component: NotFoundComponent
   }
 ];
 

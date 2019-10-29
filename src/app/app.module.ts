@@ -11,6 +11,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {ExceptionService} from './core/exception.service';
 import {PublicModule} from './public/public.module';
+import {OrderModule} from './order/order.module';
 
 @NgModule({
   declarations: [
@@ -23,14 +24,10 @@ import {PublicModule} from './public/public.module';
     AppMaterialModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MatListModule,
-    MatCardModule,
-    MatTableModule,
-    MatInputModule,
-    MatDialogModule,
     FormsModule,
     HttpClientModule,
-    PublicModule
+    PublicModule,
+    OrderModule
   ],
   providers: [
     ExceptionService
