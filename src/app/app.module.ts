@@ -6,7 +6,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppMaterialModule} from './app-material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatCardModule, MatDialogModule, MatInputModule, MatListModule, MatTableModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {ExceptionService} from './core/exception.service';
