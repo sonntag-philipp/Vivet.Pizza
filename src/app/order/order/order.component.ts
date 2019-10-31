@@ -17,10 +17,33 @@ export class OrderComponent implements OnInit {
       options: [
         {
           name: "Zwiebeln"
+        },
+        {
+          name: "Joghurtsauce"
+        },
+        {
+          name: "Schnittlauch"
         }
       ],
       price: 5.00
-    }
+    },
+    {
+      name: "Pizza Kebab",
+      description: "Frischer Teig mit Fleisch vom Spieß",
+      ingredients: ["Schweinefleisch, Tomatensoße", "Käse"],
+      options: [
+        {
+          name: "Zwiebeln"
+        },
+        {
+          name: "Tzatziki"
+        },
+        {
+          name: "Ruccola"
+        }
+      ],
+      price: 8.00
+    },
   ];
 
   constructor(private orderService: OrderService) { }

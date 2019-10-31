@@ -36,7 +36,7 @@ export class OrderTableComponent implements OnInit {
         if (!state.matches && this.displayedColumns.length > 3) {
           this.displayedColumns.pop();
         }
-        else if (this.displayedColumns.length === 3 && state.matches){
+        else if (this.displayedColumns.length === 3 && state.matches) {
           this.displayedColumns.push('options');
         }
       }
