@@ -1,8 +1,8 @@
-import {Restaurant} from '../../shared/restaurant.model';
 import {Dish} from '../../shared/dish.model';
+import {Restaurant} from '../../shared/restaurant.model';
 
-export class Order {
-  public id: string;
+export class Menu {
+  public version: string;
   public restaurant: Restaurant;
   public dishes: Dish[] = [];
 }

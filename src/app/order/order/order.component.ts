@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Dish} from '../shared/dish.model';
+import {Dish} from '../../shared/dish.model';
 import {OrderService} from '../order.service';
 import {Order} from '../shared/order.model';
 import {MatDialog} from '@angular/material';

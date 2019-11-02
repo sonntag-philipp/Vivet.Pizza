@@ -1,4 +1,4 @@
-import {Dish} from '../order/shared/dish.model';
+import {Dish} from './dish.model';
 import {Address} from './address.model';
 
 export class Restaurant {

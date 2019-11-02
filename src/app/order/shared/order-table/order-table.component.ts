@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Dish} from '../dish.model';
+import {Dish} from '../../../shared/dish.model';
 import {BreakpointObserver, Breakpoints, BreakpointState} from '@angular/cdk/layout';
 import {Observable, Subscription} from 'rxjs';
 import {filter} from 'rxjs/operators';

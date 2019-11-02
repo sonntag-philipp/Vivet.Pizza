@@ -12,6 +12,7 @@ import {ExceptionService} from './core/exception.service';
 import {PublicModule} from './public/public.module';
 import {OrderModule} from './order/order.module';
 import {SharedModule} from './shared/shared.module';
+import {MenuModule} from './menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {SharedModule} from './shared/shared.module';
     HttpClientModule,
     PublicModule,
     OrderModule,
-    SharedModule
+    SharedModule,
+    MenuModule
   ],
   providers: [
     ExceptionService

@@ -2,9 +2,12 @@
   <mat-card fxFlex.gt-md="50" fxFlex="100" class="order-card">
     <mat-toolbar color="primary">
       <span>
-        Your order:
+        Your order
       </span>
       <span fxFlex="auto"></span>
+      <button mat-icon-button (click)="openRestaurantDetails()">
+        <mat-icon>post_add</mat-icon>
+      </button>
       <button mat-icon-button (click)="openRestaurantDetails()">
         <mat-icon>restaurant</mat-icon>
       </button>
