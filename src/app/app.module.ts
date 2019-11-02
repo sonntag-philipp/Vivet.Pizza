@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {ExceptionService} from './core/exception.service';
 import {PublicModule} from './public/public.module';
 import {OrderModule} from './order/order.module';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {OrderModule} from './order/order.module';
     FormsModule,
     HttpClientModule,
     PublicModule,
-    OrderModule
+    OrderModule,
+    SharedModule
   ],
   providers: [
     ExceptionService

@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>{{ data.name }}</h1>
+<div mat-dialog-content>
+  <div class="address-container" *ngFor="let address of data.addresses; let i = index">
+    <table>
+      <tr>
+        <td class="row-title">
+          City
+        </td>
+        <td>
+          {{ address.code + " " + address.city }}
+        </td>
+      </tr>
+      <tr>
+        <td class="row-title">
+          Street
+        </td>
+        <td>
+          {{ address.street }}
+        </td>
+      </tr>
+      <tr>
+        <td class="row-title">
+          Phone
+        </td>
+        <td>
+          {{ address.phone }}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

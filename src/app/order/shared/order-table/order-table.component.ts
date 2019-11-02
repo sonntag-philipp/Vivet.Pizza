@@ -17,7 +17,7 @@ export class OrderTableComponent implements OnInit {
 
   public displayedColumns: string[] = [
     'name',
-    'description',
+    'options',
     'price'
   ];
 
@@ -37,7 +37,7 @@ export class OrderTableComponent implements OnInit {
           this.displayedColumns.pop();
         }
         else if (this.displayedColumns.length === 3 && state.matches) {
-          this.displayedColumns.push('options');
+          this.displayedColumns.push('description');
         }
       }
     );

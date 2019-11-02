@@ -2,7 +2,9 @@ import {NgModule} from '@angular/core';
 
 import {
   MatButtonModule,
-  MatCardModule, MatDialogModule,
+  MatCardModule,
+  MatDialogModule,
+  MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -19,7 +21,9 @@ import {
     MatCardModule,
     MatTableModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDialogModule,
+    MatGridListModule
   ]
 })
 export class AppMaterialModule { }
