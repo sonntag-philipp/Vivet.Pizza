@@ -5,7 +5,7 @@
         Your order
       </span>
       <span fxFlex="auto"></span>
-      <button mat-icon-button (click)="openRestaurantDetails()">
+      <button mat-icon-button [routerLink]="['/menu', order.restaurant.id]">
         <mat-icon>post_add</mat-icon>
       </button>
       <button mat-icon-button (click)="openRestaurantDetails()">

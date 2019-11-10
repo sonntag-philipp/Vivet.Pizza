@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {
   MatButtonModule,
   MatCardModule,
+  MatCheckboxModule,
   MatDialogModule,
   MatGridListModule,
   MatIconModule,
@@ -23,7 +24,8 @@ import {
     MatInputModule,
     MatDialogModule,
     MatDialogModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCheckboxModule
   ]
 })
 export class AppMaterialModule { }

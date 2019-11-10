@@ -13,6 +13,9 @@ import {PublicModule} from './public/public.module';
 import {OrderModule} from './order/order.module';
 import {SharedModule} from './shared/shared.module';
 import {MenuModule} from './menu/menu.module';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import {MenuModule} from './menu/menu.module';
     PublicModule,
     OrderModule,
     SharedModule,
-    MenuModule
+    MenuModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     ExceptionService

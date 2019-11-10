@@ -17,7 +17,7 @@ export class OrderComponent implements OnInit {
     restaurant: {
       name: "Piccola Strada",
       dishes: [],
-      id: "1",
+      id: "BKbzYFJQeYDsTWz16CpP",
       addresses: [
         {
           city: "Papenburg",

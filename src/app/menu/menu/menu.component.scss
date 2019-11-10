@@ -1,0 +1,26 @@
+.menu-card {
+  padding: 0;
+  margin: 16px;
+}
+
+.menu-card mat-toolbar {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  height: 56px;
+  font-size: 20pt;
+  margin: 0;
+  font-weight: normal;
+}
+
+.menu-card mat-card-content  {
+  padding: 16px;
+  margin: 0;
+}
+
+.menu-container {
+  height: 100%;
+}
+
+.card-content-headline {
+  font-weight: 300;
+}

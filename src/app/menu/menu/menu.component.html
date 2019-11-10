@@ -1,1 +1,12 @@
-<p>menu works!</p>
+<div class="menu-container" fxLayoutAlign.gt-xs="center center" fxLayoutAlign="center start">
+  <mat-card fxFlex.gt-md="50" fxFlex="100" class="menu-card">
+    <mat-toolbar color="primary">
+      <span>
+        Menu of {{ (restaurant$ | async)?.name }}
+      </span>
+    </mat-toolbar>
+    <mat-card-content>
+      <vp-menu-table [dishes]="dishes$"></vp-menu-table>
+    </mat-card-content>
+  </mat-card>
+</div>
