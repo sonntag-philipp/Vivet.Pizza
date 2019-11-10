@@ -5,6 +5,18 @@
 
 <table class="order-table-container" mat-table [dataSource]="dataSource">
 
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox class="selection-checkbox"
+                    (click)="$event.stopPropagation()"
+                    (change)="$event ? dishSelected(row, $event) : null"
+                    [checked]="selection.isSelected(row)">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+
   <!-- Position Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef>Name</th>

@@ -9,6 +9,7 @@ import {
   MatIconModule,
   MatInputModule,
   MatListModule,
+  MatSortModule,
   MatTableModule,
   MatToolbarModule
 } from '@angular/material';
@@ -25,7 +26,8 @@ import {
     MatDialogModule,
     MatDialogModule,
     MatGridListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSortModule
   ]
 })
 export class AppMaterialModule { }
