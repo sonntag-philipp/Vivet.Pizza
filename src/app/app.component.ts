@@ -1,6 +1,4 @@
-import {Component, HostBinding} from '@angular/core';
-import {OverlayContainer} from '@angular/cdk/overlay';
-import {ThemeService} from './core/theme.service';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'vp-root',
@@ -9,12 +7,6 @@ import {ThemeService} from './core/theme.service';
 })
 export class AppComponent {
 
-  public get theme(): string {
-    return this._themeService.theme;
-  }
-
-  constructor(
-    private _themeService: ThemeService
-  ) {
+  constructor() {
   }
 }

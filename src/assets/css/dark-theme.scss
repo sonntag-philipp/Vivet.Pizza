@@ -14,7 +14,3 @@ $vp-mat-dark-theme:   mat-dark-theme($vp-mat-dark-primary, $vp-mat-dark-accent, 
   fill: #eaeaea;
   @include angular-material-theme($vp-mat-dark-theme);
 }
-
-.vp-mat-dark-theme > svg {
-  fill: #eaeaea;
-}

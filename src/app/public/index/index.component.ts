@@ -21,6 +21,10 @@ export class IndexComponent {
     return this._sessionService.orderId;
   }
 
+  public get darkModeActive(): boolean {
+    return this._themeService.darkMode;
+  }
+
   constructor(
     private _dialog: MatDialog,
     private _router: Router,
@@ -38,11 +42,7 @@ export class IndexComponent {
   }
 
   public toggleDarkMode(darkModeToggle: MatSlideToggle): void {
-    if (darkModeToggle.checked) {
-      this._themeService.theme = 'vp-mat-light-theme';
-    } else {
-      this._themeService.theme = 'vp-mat-dark-theme';
-    }
+    this._themeService.darkMode = !this._themeService.darkMode;
   }
 
   public getLogoResource(darkmode: boolean) {

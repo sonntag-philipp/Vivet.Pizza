@@ -16,6 +16,5 @@ $vp-mat-light-theme:   mat-light-theme($vp-mat-light-primary, $vp-mat-light-acce
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 .vp-mat-light-theme {
-  background-color: #eaeaea;
   @include angular-material-theme($vp-mat-light-theme);
 }

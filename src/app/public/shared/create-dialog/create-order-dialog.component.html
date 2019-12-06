@@ -2,6 +2,7 @@
 <div mat-dialog-content>
   <mat-action-list>
     <button *ngFor="let restaurant of availableRestaurants" mat-dialog-close mat-list-item (click)="chooseRestaurant(restaurant)">
+      <mat-icon class="mat-list-item-icon">restaurant</mat-icon>
       {{ restaurant.name }}
     </button>
   </mat-action-list>
