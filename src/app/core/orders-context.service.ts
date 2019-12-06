@@ -1,10 +1,9 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Restaurant} from '../shared/restaurant.model';
 import {Observable} from 'rxjs';
 import {Order} from '../order/shared/order.model';
 import {environment} from '../../environments/environment';
-import {takeUntil} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'

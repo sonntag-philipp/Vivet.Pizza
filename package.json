@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod=true --aot=true",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -23,7 +23,9 @@
     "@angular/material": "^8.2.0",
     "@angular/platform-browser": "~8.2.4",
     "@angular/platform-browser-dynamic": "~8.2.4",
+    "@angular/pwa": "^0.803.20",
     "@angular/router": "~8.2.4",
+    "@angular/service-worker": "~8.2.4",
     "firebase": "^7.2.3",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.4.0",

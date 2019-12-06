@@ -1,10 +1,28 @@
 <div class="index-container" fxLayoutAlign="center center">
-  <div fxLayout="column">
-    <img class="index-image" src="assets/img/logo.svg" alt="Lama with pizza">
-    <h1 class="index-title">Vivizza</h1>
-    <div fxLayoutAlign="center">
-      <button mat-stroked-button color="primary" class="option-button" (click)="createOrder()">Create order</button>
-      <button mat-stroked-button color="warn" class="option-button" (click)="joinOrder()">Join order</button>
+  <div
+    fxFlex.xl="30"
+    fxFlex.gt-xs="40"
+    fxFlex="100"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+  >
+    <div fxLayout="row" fxLayoutAlign="center">
+      <img fxFlex="80" src="assets/img/logo.svg" alt="Lama with pizza">
     </div>
+    <h1 class="index-title">Vivizza</h1>
+    <div fxFill fxLayout="column">
+      <button mat-stroked-button color="primary" class="option-button" (click)="createOrder()">
+        Create order
+      </button>
+      <button mat-stroked-button color="warn" class="option-button" (click)="joinOrder()">
+        Join order
+      </button>
+      <button *ngIf="lastOrderExits" fxFlex="100" mat-stroked-button color="accent" class="option-button" (click)="joinOrder()">
+        Open last order (#{{ lastOrderId }})
+      </button>
+    </div>
+    <mat-slide-toggle #darkModeToggle class="darkmode-toggle" (toggleChange)="toggleDarkMode(darkModeToggle)">
+      {{ darkModeToggle.checked ? 'Light mode!' : 'Dark mode!' }}
+    </mat-slide-toggle>
   </div>
 </div>

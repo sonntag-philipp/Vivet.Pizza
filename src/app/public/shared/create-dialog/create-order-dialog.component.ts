@@ -16,36 +16,11 @@ import {SessionService} from '../../../core/session.service';
 })
 export class CreateOrderDialogComponent implements OnInit, OnDestroy {
 
-  availableRestaurants: Restaurant[] = [
-    {
-      name: 'Piccola Strada',
-      id: '0',
-      addresses: [
-        {
-          city: 'Papenburg',
-          code: '26871',
-          description: 'Macht Pizza',
-          phone: '04961 9856808',
-          street: 'Splitting links 3'
-        }
-      ],
-      dishes: [
-        {
-          id: '0',
-          description: 'Pidser',
-          ingredients: ['Pidserteig'],
-          name: 'Pidser',
-          options: [],
-          price: 4.5
-        }
-      ]
-    }
-  ];
+  availableRestaurants: Restaurant[] = [];
 
   private _destroy$: Subject<void> = new Subject<void>();
 
   constructor(
-    public dialogRef: MatDialogRef<CreateOrderDialogComponent>,
     private _router: Router,
     private _restaurantsContext: RestaurantsContextService,
     private _ordersContext: OrdersContextService,

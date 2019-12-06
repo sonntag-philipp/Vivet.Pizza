@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// Primary, accent and warn color for light theme
+$vp-mat-light-primary: mat-palette($mat-indigo);
+$vp-mat-light-accent:  mat-palette($mat-pink);
+
+// The warn palette is optional (defaults to red).
+$vp-mat-light-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$vp-mat-light-theme:   mat-light-theme($vp-mat-light-primary, $vp-mat-light-accent, $vp-mat-light-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+.vp-mat-light-theme {
+  background-color: #eaeaea;
+  @include angular-material-theme($vp-mat-light-theme);
+}

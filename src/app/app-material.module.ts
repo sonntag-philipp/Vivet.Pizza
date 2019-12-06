@@ -9,6 +9,7 @@ import {
   MatIconModule,
   MatInputModule,
   MatListModule,
+  MatSlideToggleModule,
   MatSortModule,
   MatTableModule,
   MatToolbarModule
@@ -27,7 +28,8 @@ import {
     MatDialogModule,
     MatGridListModule,
     MatCheckboxModule,
-    MatSortModule
+    MatSortModule,
+    MatSlideToggleModule
   ]
 })
 export class AppMaterialModule { }

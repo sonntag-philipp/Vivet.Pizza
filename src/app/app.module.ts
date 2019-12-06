@@ -17,6 +17,10 @@ import {RestaurantsContextService} from './core/restaurants-context.service';
 import {OrdersContextService} from './core/orders-context.service';
 import {SessionService} from './core/session.service';
 import {SessionGuard} from './core/guards/session.guard';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import {OverlayContainer, OverlayModule} from '@angular/cdk/overlay';
+import {ThemeService} from './core/theme.service';
 
 @NgModule({
   declarations: [
@@ -34,17 +38,22 @@ import {SessionGuard} from './core/guards/session.guard';
     PublicModule,
     OrderModule,
     SharedModule,
-    MenuModule
+    MenuModule,
+    OverlayModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     ExceptionService,
     RestaurantsContextService,
     OrdersContextService,
     SessionService,
-    SessionGuard
+    SessionGuard,
+    ThemeService
   ],
   bootstrap: [
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+
+}

@@ -1,37 +1,38 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {AngularFirestore} from '@angular/fire/firestore';
+import {Component, Inject, OnDestroy} from '@angular/core';
+import {MAT_DIALOG_DATA} from '@angular/material';
 import {Subject} from 'rxjs';
-import {debounceTime} from 'rxjs/operators';
+import {OrdersContextService} from '../../../core/orders-context.service';
+import {Order} from '../../../order/shared/order.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'vp-join-dialog',
   templateUrl: './join-order-dialog.component.html',
   styleUrls: ['./join-order-dialog.component.scss']
 })
-export class JoinOrderDialogComponent {
+export class JoinOrderDialogComponent implements OnDestroy {
 
-  private _inputObservable: Subject<string> = new Subject<string>();
+  private _destroy$: Subject<void> = new Subject<void>();
 
   constructor(
-    public dialogRef: MatDialogRef<JoinOrderDialogComponent>,
-    private db: AngularFirestore,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
+    private _ordersContext: OrdersContextService,
+    private _router: Router,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {
+  }
 
-    this._inputObservable.pipe(
-      debounceTime(1000)
-    ).subscribe(
-      next => {
-        console.log(next);
+  public joinOrder(orderId: string): void {
+    this._ordersContext.getOrder(orderId).subscribe(
+      (order: Order) => {
+        if (!!order.id) {
+          console.log(order);
+          this._router.navigate(['/', order.id, 'order']);
+        }
       }
     );
   }
 
-  returnId(value: string) {
-    this.dialogRef.close(value);
-  }
-
-  inputChanged(event: any) {
-
+  public ngOnDestroy(): void {
+    this._destroy$.next();
   }
 }
