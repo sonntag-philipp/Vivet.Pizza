@@ -18,4 +18,5 @@ import {AppMaterialModule} from '../app-material.module';
     RestaurantDialogComponent
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

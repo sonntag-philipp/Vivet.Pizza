@@ -11,6 +11,7 @@ export class RestaurantDialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<RestaurantDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Restaurant) {}
+    @Inject(MAT_DIALOG_DATA) public data: Restaurant) {
+  }
 
 }

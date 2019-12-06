@@ -13,9 +13,10 @@ import {PublicModule} from './public/public.module';
 import {OrderModule} from './order/order.module';
 import {SharedModule} from './shared/shared.module';
 import {MenuModule} from './menu/menu.module';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {AngularFireModule} from '@angular/fire';
-import {environment} from '../environments/environment';
+import {RestaurantsContextService} from './core/restaurants-context.service';
+import {OrdersContextService} from './core/orders-context.service';
+import {SessionService} from './core/session.service';
+import {SessionGuard} from './core/guards/session.guard';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,14 @@ import {environment} from '../environments/environment';
     PublicModule,
     OrderModule,
     SharedModule,
-    MenuModule,
-    AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    MenuModule
   ],
   providers: [
-    ExceptionService
+    ExceptionService,
+    RestaurantsContextService,
+    OrdersContextService,
+    SessionService,
+    SessionGuard
   ],
   bootstrap: [
     AppComponent

@@ -11,7 +11,7 @@ import {RestaurantDialogComponent} from '../../shared/restaurant-dialog/restaura
   styleUrls: ['./order.component.scss']
 })
 export class OrderComponent implements OnInit {
-
+/*
   public order: Order = {
     id: "1",
     restaurant: {
@@ -65,7 +65,7 @@ export class OrderComponent implements OnInit {
         price: 8.50
       },
     ]
-  };
+  };*/
 
   constructor(private orderService: OrderService, private dialog: MatDialog) { }
 
@@ -73,8 +73,5 @@ export class OrderComponent implements OnInit {
   }
 
   openRestaurantDetails() {
-    this.dialog.open(RestaurantDialogComponent, {
-      data: this.order.restaurant
-    });
   }
 }

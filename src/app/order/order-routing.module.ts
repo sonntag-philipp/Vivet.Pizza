@@ -5,7 +5,7 @@ import {OrderComponent} from './order/order.component';
 
 const routes: Routes = [
   {
-    path: "order",
+    path: ':orderId/order',
     component: OrderComponent
   }
 ];
@@ -14,5 +14,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class OrderRoutingModule { }
+export class OrderRoutingModule {
+}
 

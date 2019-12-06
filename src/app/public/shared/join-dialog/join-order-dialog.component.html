@@ -1,0 +1,7 @@
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Order ID:" #idInput (keydown)="inputChanged($event);">
+</mat-form-field>
+<div mat-dialog-actions>
+  <button mat-stroked-button fxFlex="auto" color="accent" (click)="returnId(idInput.value);">OK</button>
+  <button mat-stroked-button fxFlex="auto" color="warn">Cancel</button>
+</div>

@@ -2,7 +2,7 @@ import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import {Dish} from '../../../shared/dish.model';
 import {MatCheckboxChange, MatDialog, MatTableDataSource} from '@angular/material';
-import {map, takeUntil, tap} from 'rxjs/operators';
+import {takeUntil} from 'rxjs/operators';
 import {SelectionModel} from '@angular/cdk/collections';
 import {AddDishDialogComponent} from '../add-dish-dialog/add-dish-dialog.component';
 
@@ -28,7 +28,8 @@ export class MenuTableComponent implements OnInit, OnDestroy {
 
   constructor(
     private dialog: MatDialog
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.destroy$ = new Subject<void>();
@@ -39,7 +40,7 @@ export class MenuTableComponent implements OnInit, OnDestroy {
       )
       .subscribe(dishes => {
         this.dataSource = new MatTableDataSource<Dish>(dishes);
-    });
+      });
   }
 
   ngOnDestroy(): void {

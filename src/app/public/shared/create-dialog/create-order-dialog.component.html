@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Create order</h1>
+<div mat-dialog-content>
+  <mat-action-list>
+    <button *ngFor="let restaurant of availableRestaurants" mat-list-item (click)="chooseRestaurant(restaurant)">
+      {{ restaurant.name }}
+    </button>
+  </mat-action-list>
+</div>
