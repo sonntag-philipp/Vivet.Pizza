@@ -7,7 +7,7 @@
     fxLayoutAlign="center center"
   >
     <div fxLayout="row" fxLayoutAlign="center">
-      <img fxFlex="80" src="assets/img/logo.svg" alt="Lama with pizza">
+      <img fxFlex="80" [src]="getLogoResource(darkModeToggle.checked)" alt="Lama with pizza">
     </div>
     <h1 class="index-title">Vivizza</h1>
     <div fxFill fxLayout="column">

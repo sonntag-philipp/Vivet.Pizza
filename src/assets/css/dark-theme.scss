@@ -10,5 +10,11 @@ $vp-mat-dark-theme:   mat-dark-theme($vp-mat-dark-primary, $vp-mat-dark-accent, 
 
 .vp-mat-dark-theme {
   background-color: #272727;
+  color: #eaeaea;
+  fill: #eaeaea;
   @include angular-material-theme($vp-mat-dark-theme);
+}
+
+.vp-mat-dark-theme > svg {
+  fill: #eaeaea;
 }

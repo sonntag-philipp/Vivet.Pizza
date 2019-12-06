@@ -44,4 +44,8 @@ export class IndexComponent {
       this._themeService.theme = 'vp-mat-dark-theme';
     }
   }
+
+  public getLogoResource(darkmode: boolean) {
+    return darkmode ? "assets/img/logo_light.svg" : "assets/img/logo.svg"
+  }
 }
