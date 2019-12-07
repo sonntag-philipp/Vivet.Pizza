@@ -11,3 +11,5 @@ Vivizza is an Angular application that is designed to order pizzas or other dish
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ## Build
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Credits
+- [Source](https://designbundles.net/jpgstock/130355-llama-with-pizza-svg-jpg-png) of the logo

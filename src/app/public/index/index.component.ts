@@ -53,6 +53,5 @@ export class IndexComponent {
     if (this._sessionService.sessionActive) {
       this._router.navigate(['/', this._sessionService.orderId, 'order']);
     }
-
   }
 }
