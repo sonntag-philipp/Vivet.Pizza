@@ -17,7 +17,7 @@
       <button mat-stroked-button color="warn" class="option-button" (click)="joinOrder()">
         Join order
       </button>
-      <button *ngIf="lastOrderExits" fxFlex="100" mat-stroked-button color="accent" class="option-button" (click)="joinOrder()">
+      <button *ngIf="lastOrderExits" fxFlex="100" mat-stroked-button color="accent" class="option-button" (click)="openLastOrder()">
         Open last order (#{{ lastOrderId }})
       </button>
     </div>

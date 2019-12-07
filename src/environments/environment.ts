@@ -6,6 +6,10 @@ export const environment = {
   production: false,
   api: {
     address: "https://localhost:5001/api"
+  },
+  themes: {
+    light: 'vp-mat-light-theme',
+    dark: 'vp-mat-dark-theme'
   }
 };
 

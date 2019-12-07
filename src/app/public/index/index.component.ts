@@ -46,6 +46,13 @@ export class IndexComponent {
   }
 
   public getLogoResource(darkmode: boolean) {
-    return darkmode ? "assets/img/logo_light.svg" : "assets/img/logo.svg"
+    return darkmode ? 'assets/img/logo_light.svg' : 'assets/img/logo.svg';
+  }
+
+  public openLastOrder(): void {
+    if (this._sessionService.sessionActive) {
+      this._router.navigate(['/', this._sessionService.orderId, 'order']);
+    }
+
   }
 }
