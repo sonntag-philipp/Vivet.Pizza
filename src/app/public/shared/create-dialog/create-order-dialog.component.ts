@@ -1,5 +1,5 @@
 import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA} from '@angular/material';
 import {Restaurant} from '../../../shared/restaurant.model';
 import {RestaurantsContextService} from '../../../core/restaurants-context.service';
 import {Router} from '@angular/router';
@@ -30,7 +30,10 @@ export class CreateOrderDialogComponent implements OnInit, OnDestroy {
   }
 
   public chooseRestaurant(restaurant: Restaurant): void {
-    this._ordersContext.postOrder(restaurant)
+    console.log({restaurant});
+    this._ordersContext.postOrder({
+      restaurantId: restaurant.id
+    })
       .pipe(
         takeUntil(this._destroy$)
       )
@@ -38,6 +41,7 @@ export class CreateOrderDialogComponent implements OnInit, OnDestroy {
         (order: Order) => {
           console.log(order);
           this._sessionService.orderId = order.id;
+          this._router.navigate(['/', order.id, 'order']);
         }
       );
   }
@@ -51,6 +55,6 @@ export class CreateOrderDialogComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-
+    this._destroy$.next();
   }
 }

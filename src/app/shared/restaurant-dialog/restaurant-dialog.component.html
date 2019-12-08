@@ -1,13 +1,13 @@
-<h1 mat-dialog-title>{{ data.name }}</h1>
+<h1 mat-dialog-title>{{ restaurant.name }}</h1>
 <div mat-dialog-content>
-  <div class="address-container" *ngFor="let address of data.addresses; let i = index">
+  <div class="address-container">
     <table>
       <tr>
         <td class="row-title">
           City
         </td>
         <td>
-          {{ address.code + " " + address.city }}
+          {{ restaurant.address.code + " " + restaurant.address.city }}
         </td>
       </tr>
       <tr>
@@ -15,7 +15,7 @@
           Street
         </td>
         <td>
-          {{ address.street }}
+          {{ restaurant.address.street }}
         </td>
       </tr>
       <tr>
@@ -23,7 +23,7 @@
           Phone
         </td>
         <td>
-          {{ address.phone }}
+          {{ restaurant.address.phone }}
         </td>
       </tr>
     </table>

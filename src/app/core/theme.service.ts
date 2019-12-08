@@ -11,7 +11,6 @@ export class ThemeService {
   }
 
   public set darkMode(value: boolean) {
-    console.log(value);
     if (value) {
       this.setDarkMode();
     } else {
@@ -23,7 +22,7 @@ export class ThemeService {
 
   constructor() {
     const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'vp-mat-light-theme') {
+    if (storedTheme === 'vp-mat-light-theme' || storedTheme === null) {
       this.setLightMode();
     }
     else {

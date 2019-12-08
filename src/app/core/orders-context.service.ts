@@ -14,11 +14,11 @@ export class OrdersContextService {
     private _httpClient: HttpClient
   ) { }
 
-  public postOrder(restaurant: Restaurant): Observable<Order> {
-    return this._httpClient.post<Order>(environment.api.address + "/orders", restaurant);
+  public postOrder(order: Order): Observable<Order> {
+    return this._httpClient.post<Order>(environment.api.address + "/orders", order);
   }
 
-  public getOrder(restaurantId: string): Observable<Order> {
-    return this._httpClient.get<Order>(environment.api.address + "/orders/" + restaurantId);
+  public getOrder(orderId: number): Observable<Order> {
+    return this._httpClient.get<Order>(environment.api.address + "/orders/" + orderId);
   }
 }

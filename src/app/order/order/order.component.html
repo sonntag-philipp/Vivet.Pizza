@@ -1,11 +1,11 @@
-<div class="order-container" fxLayoutAlign.gt-xs="center center" fxLayoutAlign="center start"><!--
+<div class="order-container" fxLayoutAlign.gt-xs="center center" fxLayoutAlign="center start">
   <mat-card fxFlex.gt-md="50" fxFlex="100" class="order-card">
     <mat-toolbar color="primary">
       <span>
         Your order
       </span>
       <span fxFlex="auto"></span>
-      <button mat-icon-button [routerLink]="['/menu', order.restaurant.id]">
+      <button mat-icon-button [routerLink]="['/', order.restaurant?.id, 'menu']">
         <mat-icon>post_add</mat-icon>
       </button>
       <button mat-icon-button (click)="openRestaurantDetails()">
@@ -16,7 +16,7 @@
       </button>
     </mat-toolbar>
     <mat-card-content>
-      <vp-order-table [dishes]="order.dishes"></vp-order-table>
+      <vp-order-table></vp-order-table>
     </mat-card-content>
-  </mat-card>-->
+  </mat-card>
 </div>

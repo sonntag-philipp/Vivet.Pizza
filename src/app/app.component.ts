@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ThemeService} from './core/theme.service';
 
 @Component({
   selector: 'vp-root',
@@ -7,6 +8,8 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() {
+  constructor(
+    private _themeService: ThemeService
+  ) {
   }
 }

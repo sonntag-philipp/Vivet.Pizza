@@ -21,11 +21,10 @@ export class JoinOrderDialogComponent implements OnDestroy {
   ) {
   }
 
-  public joinOrder(orderId: string): void {
+  public joinOrder(orderId: number): void {
     this._ordersContext.getOrder(orderId).subscribe(
       (order: Order) => {
         if (!!order.id) {
-          console.log(order);
           this._router.navigate(['/', order.id, 'order']);
         }
       }

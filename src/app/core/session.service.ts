@@ -12,7 +12,6 @@ export class SessionService {
   }
 
   public set orderId(orderId: string) {
-    localStorage.clear();
     localStorage.setItem('orderId', orderId);
     localStorage.setItem('timestamp', new Date().toString());
   }
@@ -22,7 +21,8 @@ export class SessionService {
     if (!!timestamp) {
       const dayDiff = new Date().getDate() - new Date(timestamp).getDate();
       if (dayDiff >= 1) {
-        localStorage.clear();
+        localStorage.removeItem('timestamp');
+        localStorage.removeItem('orderId');
         return false;
       }
       return !!localStorage.getItem('orderId');

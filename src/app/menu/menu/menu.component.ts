@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {AngularFirestore} from '@angular/fire/firestore';
 import {Observable, Subject} from 'rxjs';
 import {Dish} from '../../shared/dish.model';
 import {Restaurant} from '../../shared/restaurant.model';
@@ -18,9 +17,9 @@ export class MenuComponent implements OnInit, OnDestroy {
   public restaurant$: Observable<Restaurant>;
 
   constructor(
-    private route: ActivatedRoute,
-    private firestore: AngularFirestore
-  ) { }
+    private route: ActivatedRoute
+  ) {
+  }
 
   ngOnInit() {
     this._onDestroy$ = new Subject<boolean>();
@@ -35,16 +34,5 @@ export class MenuComponent implements OnInit, OnDestroy {
   }
 
   private initObservables(restaurantId: string): void {
-    this.dishes$ = this.firestore.collection('Restaurants').doc(restaurantId).collection<Dish>('Dishes')
-      .valueChanges()
-      .pipe(
-        takeUntil(this._onDestroy$)
-      );
-
-    this.restaurant$ = this.firestore.collection('Restaurants').doc<Restaurant>(restaurantId)
-      .valueChanges()
-      .pipe(
-        takeUntil(this._onDestroy$)
-      );
   }
 }
