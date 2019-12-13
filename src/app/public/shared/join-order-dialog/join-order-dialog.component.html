@@ -1,5 +1,5 @@
 <mat-form-field class="order-id-input">
-  <input matInput placeholder="Order ID:" #idInput>
+  <input autocomplete="off" matInput placeholder="Order ID:" #idInput>
 </mat-form-field>
 <div mat-dialog-actions>
   <button mat-stroked-button mat-dialog-close fxFlex="auto" color="accent" (click)="joinOrder(idInput.value);">OK</button>

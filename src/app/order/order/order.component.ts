@@ -1,10 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {OrderService} from '../order.service';
+import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material';
-import {Order} from '../shared/order.model';
-import {OrdersContextService} from '../../core/orders-context.service';
+import {Order} from '@models/order.model';
+import {OrdersContextService} from '@app/core/orders-context.service';
 import {ActivatedRoute, Params} from '@angular/router';
-import {RestaurantDialogComponent} from '../../shared/restaurant-dialog/restaurant-dialog.component';
+import {RestaurantDialogComponent} from '@models/restaurant-dialog/restaurant-dialog.component';
+import {SessionService} from '@app/core/session.service';
 
 @Component({
   selector: 'vp-order',
@@ -18,7 +18,8 @@ export class OrderComponent implements OnInit {
   constructor(
     private _ordersContext: OrdersContextService,
     private _dialog: MatDialog,
-    private _route: ActivatedRoute
+    private _route: ActivatedRoute,
+    private _sessionService: SessionService
   ) {
   }
 
@@ -29,6 +30,7 @@ export class OrderComponent implements OnInit {
           this._ordersContext.getOrder(params.orderId).subscribe(
             (order: Order) => {
               this.order = order;
+              this._sessionService.orderId = order.id;
             }
           );
         }
@@ -37,7 +39,6 @@ export class OrderComponent implements OnInit {
   }
 
   public openRestaurantDetails(): void {
-    console.log(this.order);
     this._dialog.open(RestaurantDialogComponent, {
       data: this.order.restaurant
     });

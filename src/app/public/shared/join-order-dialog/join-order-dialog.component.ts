@@ -2,7 +2,7 @@ import {Component, Inject, OnDestroy} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material';
 import {Subject} from 'rxjs';
 import {OrdersContextService} from '../../../core/orders-context.service';
-import {Order} from '../../../order/shared/order.model';
+import {Order} from '../../../shared/order.model';
 import {Router} from '@angular/router';
 
 @Component({

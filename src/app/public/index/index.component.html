@@ -21,8 +21,8 @@
         Open last order (#{{ lastOrderId }})
       </button>
     </div>
-    <mat-slide-toggle [checked]="darkModeActive" #darkModeToggle class="darkmode-toggle" (toggleChange)="toggleDarkMode(darkModeToggle)">
-      {{ darkModeToggle.checked ? 'Light mode!' : 'Dark mode!' }}
+    <mat-slide-toggle #darkModeToggle [checked]="darkModeActive"  class="darkmode-toggle" (change)="toggleDarkMode()">
+      Dark theme
     </mat-slide-toggle>
   </div>
 </div>

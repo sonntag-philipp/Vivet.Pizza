@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {MatDialog, MatSlideToggle} from '@angular/material';
-import {JoinOrderDialogComponent} from '../shared/join-dialog/join-order-dialog.component';
+import {JoinOrderDialogComponent} from '../shared/join-order-dialog/join-order-dialog.component';
 import {Router} from '@angular/router';
-import {CreateOrderDialogComponent} from '../shared/create-dialog/create-order-dialog.component';
+import {CreateOrderDialogComponent} from '../shared/create-order-dialog/create-order-dialog.component';
 import {SessionService} from '../../core/session.service';
 import {ThemeService} from '../../core/theme.service';
 
@@ -41,7 +41,7 @@ export class IndexComponent {
     this._dialog.open(CreateOrderDialogComponent, {});
   }
 
-  public toggleDarkMode(darkModeToggle: MatSlideToggle): void {
+  public toggleDarkMode(): void {
     this._themeService.darkMode = !this._themeService.darkMode;
   }
 

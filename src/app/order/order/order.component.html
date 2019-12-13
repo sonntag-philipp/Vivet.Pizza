@@ -2,7 +2,7 @@
   <mat-card fxFlex.gt-md="50" fxFlex="100" class="order-card">
     <mat-toolbar color="primary">
       <span>
-        Your order
+        Your order from {{ order.restaurant?.name }}
       </span>
       <span fxFlex="auto"></span>
       <button mat-icon-button [routerLink]="['/', order.restaurant?.id, 'menu']">
@@ -16,7 +16,7 @@
       </button>
     </mat-toolbar>
     <mat-card-content>
-      <vp-order-table></vp-order-table>
+      <vp-order-table [dishes]="order.dishes"></vp-order-table>
     </mat-card-content>
   </mat-card>
 </div>

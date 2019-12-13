@@ -1,11 +1,10 @@
-import {Address} from '@models/address.model';
+import {Dish} from '@models/dish.model';
 import {Menu} from '@models/menu.model';
 
-export class Restaurant {
+export class Category {
   public id: number;
   public name: string;
-  public addressId: number;
-  public address: Address;
+  public dishes: Dish[] = [];
   public menuId: number;
   public menu: Menu;
 }

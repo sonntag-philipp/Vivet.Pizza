@@ -1,13 +1,11 @@
 import {Component, Inject, OnDestroy, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material';
-import {Restaurant} from '../../../shared/restaurant.model';
-import {RestaurantsContextService} from '../../../core/restaurants-context.service';
+import {RestaurantsContextService} from '@app/core/restaurants-context.service';
 import {Router} from '@angular/router';
-import {OrdersContextService} from '../../../core/orders-context.service';
+import {OrdersContextService} from '@app/core/orders-context.service';
 import {Subject} from 'rxjs';
-import {takeUntil} from 'rxjs/operators';
-import {Order} from '../../../order/shared/order.model';
-import {SessionService} from '../../../core/session.service';
+import {Restaurant} from '@models/restaurant.model';
+import {Order} from '@models/order.model';
 
 @Component({
   selector: 'vp-create-dialog',
@@ -24,23 +22,16 @@ export class CreateOrderDialogComponent implements OnInit, OnDestroy {
     private _router: Router,
     private _restaurantsContext: RestaurantsContextService,
     private _ordersContext: OrdersContextService,
-    private _sessionService: SessionService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
   }
 
   public chooseRestaurant(restaurant: Restaurant): void {
-    console.log({restaurant});
     this._ordersContext.postOrder({
       restaurantId: restaurant.id
     })
-      .pipe(
-        takeUntil(this._destroy$)
-      )
       .subscribe(
         (order: Order) => {
-          console.log(order);
-          this._sessionService.orderId = order.id;
           this._router.navigate(['/', order.id, 'order']);
         }
       );

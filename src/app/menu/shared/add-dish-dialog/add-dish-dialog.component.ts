@@ -1,7 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef, MatListOption, MatSelectionListChange} from '@angular/material';
-import {Dish} from '../../../shared/dish.model';
-import {Option} from '../../../shared/option.model';
+import {Dish} from '@models/dish.model';
 
 @Component({
   selector: 'vp-add-dish-dialog',

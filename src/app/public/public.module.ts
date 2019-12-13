@@ -7,8 +7,8 @@ import {PublicRoutingModule} from './public-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {SharedModule} from '../shared/shared.module';
-import {JoinOrderDialogComponent} from './shared/join-dialog/join-order-dialog.component';
-import {CreateOrderDialogComponent} from './shared/create-dialog/create-order-dialog.component';
+import {JoinOrderDialogComponent} from './shared/join-order-dialog/join-order-dialog.component';
+import {CreateOrderDialogComponent} from './shared/create-order-dialog/create-order-dialog.component';
 
 @NgModule({
   declarations: [
