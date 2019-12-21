@@ -1,5 +1,5 @@
 # Vivet Pizza
-![Lama with pizza](src/assets/img/logo.svg)
+![Lama with pizza](client/src/assets/img/logo.svg)
 Vivizza is an Angular application that is designed to order pizzas or other dishes on parties. It is meant to simplify the order process by providing a url to an order that every friend can join. The app can be reached at [https://pizza.vivet.dev/](https://pizza.vivet.dev/). The app is also available as an progressive web application.
 ## Targeted platforms
  - Mobile Devices
