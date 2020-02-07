@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
-using Vivet.Pizza.Contexts;
 
 namespace Vivet.Pizza
 {
@@ -45,18 +44,6 @@ namespace Vivet.Pizza
                         .AllowAnyHeader()
                 );
             });
-
-            services.AddDbContextPool<VivizzaContext>(
-                options => options.UseMySql(Configuration["Database:ConnectionString"],
-                    mysqlOptions =>
-                    {
-                        mysqlOptions.MaxBatchSize(int.Parse(Configuration["Database:MaxBatchSize"]));
-                        mysqlOptions.ServerVersion(Configuration["Database:ServerVersion"]);
-                    }
-                )
-                .UseLoggerFactory(
-                    LoggerFactory.Create(builder => { builder.AddConsole(); })
-                ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
