@@ -1,6 +1,6 @@
 {
   "Database": {
-    "ConnectionString": "Server=localhost;Database=vivizza;User=root;",
+    "ConnectionString": "Server=localhost;Database=vivetPizza;User=root;",
     "ServerVersion": "8.0.0-mysql",
     "MaxBatchSize": 100
   }
