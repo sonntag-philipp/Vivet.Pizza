@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {MatDialog} from '@angular/material';
 import {Order} from '@models/order.model';
 import {OrdersContextService} from '@app/core/orders-context.service';
 import {ActivatedRoute, Params} from '@angular/router';
 import {RestaurantDialogComponent} from '@models/restaurant-dialog/restaurant-dialog.component';
 import {SessionService} from '@app/core/session.service';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'vp-order',

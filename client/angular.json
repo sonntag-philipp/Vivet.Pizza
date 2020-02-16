@@ -152,5 +152,8 @@
       }
     }
   },
-  "defaultProject": "vivet-pizza"
+  "defaultProject": "vivet-pizza",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,10 +1,12 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import {Dish} from '../../../shared/dish.model';
-import {MatCheckboxChange, MatDialog, MatTableDataSource} from '@angular/material';
 import {takeUntil} from 'rxjs/operators';
 import {SelectionModel} from '@angular/cdk/collections';
 import {AddDishDialogComponent} from '../add-dish-dialog/add-dish-dialog.component';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatDialog} from '@angular/material/dialog';
+import {MatCheckboxChange} from '@angular/material/checkbox';
 
 @Component({
   selector: 'vp-menu-table',
